@@ -1,7 +1,7 @@
 .data
 	A: .space 10			# Tao mang A luu String1
 	B: .space 10			# Tao mang B luu String2
-	C: .word 0:10		# Mang trung gian chua cac ky tu 0 
+	C: .word 0:10			# Mang trung gian chua cac ky tu 0 
 	string_output: .asciiz "So luong ky tu giong nhau la: "
 	Nhap1: .asciiz "Nhap xau 1: "
 	Nhap2: .asciiz  "Nhap xau 2: "
@@ -12,10 +12,10 @@
 main:	
 array_a:
 	# Nhap mang A
-	li $v0, 54     		#show dialog
-	la $a0, Nhap1		#goi nhap1	
-	la $a1, A		#nhap gia tri vao mang A
-	li $a2, 10		#so ki tu toi da la 10
+	li $v0, 54     			#show dialog
+	la $a0, Nhap1			#goi nhap1	
+	la $a1, A			#nhap gia tri vao mang A
+	li $a2, 10			#so ki tu toi da la 10
 	syscall
 	
 	beq $a1, 0, array_b		# Nhap thanh cong gia tri mang A thi chuyen den nhap mang B
@@ -40,7 +40,7 @@ show_error1_3:
 
 array_b:
 	# Nhap mang B
-	li $v0, 54
+	li $v0, 54			
 	la $a0, Nhap2
 	la $a1, B
 	li $a2, 10
